@@ -1,0 +1,68 @@
+.checkbox {
+    display: none;
+    outline: none;
+}
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    border-radius: 50%;
+    border: 1px solid grey;
+    cursor:pointer;
+    outline: none;
+}
+input[type="checkbox"]:checked + label span {
+    background-image: url("./images/icon-check.svg"), linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    background-position: center;
+    border-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    -moz-border-image: -moz-linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    -webkit-border-image: -webkit-linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    border-image-slice: 1;
+    outline: none;
+}
+/*input[type="checkbox"]:hover + label span{*/
+/*    border: 2px solid transparent;*/
+/*    border-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));*/
+/*    -moz-border-image: -moz-linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));*/
+/*    -webkit-border-image: -webkit-linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));*/
+/*    border-image-slice: 1;*/
+/*    outline: none;*/
+/*}*/
+
+.list-container {
+    width: 100%;
+    background: white;
+    margin-top: 3rem;
+    border-radius: 5px;
+}
+.list-wrapper{
+    padding-left: 1rem;
+    padding-right: 2rem;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.list-wrapper:hover .delete-button{
+    display: initial;
+}
+.delete-button{
+    display: none;
+    background-image: url("./images/icon-cross.svg");
+    height: 20px;
+    width: 20px;
+}
+.delete-button:hover {
+    cursor: pointer;
+}
+
+.todo {
+    width: 100%;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
